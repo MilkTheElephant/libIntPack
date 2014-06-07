@@ -19,12 +19,11 @@ uint32_t create_compressed_int (uint32_t A, uint32_t B, uint32_t C, uint32_t D)
     (A << 12);
     (B << 8);
     (C << 4);
-    integer = (A < 24) | (B << 16) | (C << 8) | D;
+    integer = (A < 24) | (B << 16) | (C << 8) | D; //pack the integers into the integer!
 
     return integer;
     
 } 
-    print_int(3, var,"\n");
 
 
 
@@ -47,7 +46,7 @@ uint32_t get_int(int i, uint32_t integer)
 
     }
 
-    if (i == 2)
+    if (i == 2)  //etc etc
     {
         tmp = 0;
         tmp = (integer >> 8 & 0xFF);
@@ -81,12 +80,12 @@ void  print_int (int i, uint32_t integer)
 
     uint32_t tmp;
     
-   if (i == 0) //if not value specified, then return null.
+   if (i == 0) //if not value specified, then return nothing.
     {
         return;
     }
 
-   else if (i == 1) //if first value specified then return the first value.
+   else if (i == 1) //if first value specified then ptinf the first value.
     {
         tmp = 0;
         tmp = (integer & 0xFF);
@@ -96,7 +95,7 @@ void  print_int (int i, uint32_t integer)
 
     }
 
-   else if (i == 2)
+   else if (i == 2) //etc etc
     {
         tmp = 0;
         tmp = (integer >> 8 ) & 0xFF;
